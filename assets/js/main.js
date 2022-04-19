@@ -7,8 +7,10 @@ let categoryName = document.querySelector(".category-name");
 let categorySelect = document.querySelector('#categorySelect');
 let randomWord = document.querySelector('.random-word');
 let hintBtn = document.querySelector('.hint-btn');
+let rightWord = document.querySelector('.hint-text');
 let hintText = document.querySelector('.hint-text span');
 let livesSection = document.querySelector('.lives');
+let replayBtn = document.querySelector(".replay-btn");
 let lives = 9;
 let guessedWords = [];
 let attacks = [];
@@ -92,7 +94,7 @@ let categories = {
             },
             {
                 name: 'green',
-                explanation: 'Color of the grassF'
+                explanation: 'Color of the grass'
             },
         ]
 }
@@ -115,7 +117,7 @@ let randomCompWord = arr => {
     return arr[randomNum].name;
 }
 
-categorySelect.addEventListener("change", function () {
+categorySelect.addEventListener("change", () => {
 
     let selected = categorySelect.value;
     categoryName.innerHTML = `The chosen category is ${selected}`;
@@ -123,9 +125,7 @@ categorySelect.addEventListener("change", function () {
     let word = randomCompWord(categories[selected]);
     randomWord.style.visibility = "visible";
 
-    hintBtn.addEventListener("click", function () {
-        hintText.innerHTML = categories[selected].find(item => item.name === word).explanation;
-    });
+    hintBtn.addEventListener("click", () => hintText.innerHTML = categories[selected].find(item => item.name === word).explanation);
 
     if (word.indexOf(" ") >= 0) {
 
@@ -195,24 +195,28 @@ categorySelect.addEventListener("change", function () {
                             document.querySelector('.smile').style.display = "block";
                             document.querySelector('.man7').style.display = "none";
                             document.querySelector('.thank-img').style.display = "block";
-                            return;
+                            replayBtn.style.display = "block";
                         }
                     }
                 }
                 else {
-                    if (lives > 0) {
+                    if (lives > 1) {
+                        document.querySelector('.man' + lives).style.display = "block";
                         lives--;
-                        document.querySelector('.man' + (lives + 1)).style.display = "block";
                         livesSection.innerHTML = `You have ${lives} lives`;
 
                     } else {
+                        document.querySelector('.man1').style.display = "block";
                         livesSection.innerHTML = `<span class="text-danger" style="font-size: 60px">Game over</span>`;
-                        return;
-                    }
+                        rightWord.innerHTML = `Right word: <span class="text-info">${compAttack.toUpperCase()}</span>`;
+                        replayBtn.style.display = "block";
 
+                    }
                 }
             }
         }
     }
     window.onkeypress = startGame;
 });
+
+replayBtn.onclick = () => location.reload();

@@ -103,6 +103,18 @@ main {
     border-radius: 10px;
 }
 
+.replay-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 21%;
+    right: 5%;
+    background: transparent;
+    color: #fff;
+    display: none;
+}
+
 .hint-btn {
     width: 100px;
     height: 40px;
