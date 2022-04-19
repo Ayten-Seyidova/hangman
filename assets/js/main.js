@@ -176,7 +176,7 @@ categorySelect.addEventListener("change", () => {
                         str = str.split('');
 
                         for (let index of indices) {
-                            str[+index] = userAttack;
+                            str[index] = userAttack;
                         }
 
                         str = str.join('');
@@ -196,6 +196,7 @@ categorySelect.addEventListener("change", () => {
                             document.querySelector('.man7').style.display = "none";
                             document.querySelector('.thank-img').style.display = "block";
                             replayBtn.style.display = "block";
+                            setTimeout(() => location.reload(), 3000);
                         }
                     }
                 }
@@ -210,6 +211,7 @@ categorySelect.addEventListener("change", () => {
                         livesSection.innerHTML = `<span class="text-danger" style="font-size: 60px">Game over</span>`;
                         rightWord.innerHTML = `Right word: <span class="text-info">${compAttack.toUpperCase()}</span>`;
                         replayBtn.style.display = "block";
+                        setTimeout(() => location.reload(), 3000);
 
                     }
                 }
