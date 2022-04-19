@@ -1,0 +1,223 @@
+body {
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(#378dbc 0%, #b6e8f1 46%, #fff 50%, #32120e 54%, #ffc488 58%, #582c11 90%, #ec9b4e 100%);
+    height: 200px;
+    margin: 8px;
+    position: relative;
+}
+
+.head-text {
+    color: transparent;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 200px;
+    font-style: italic;
+    -webkit-text-stroke: 4px #f5f5f5;
+}
+
+.style-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 30%;
+    font-family: "Mr Dafoe", cursive;
+    font-size: 160px;
+    color: #f975f7;
+    filter: drop-shadow(2px 2px 20px #92397b);
+    transform: rotate(-15deg);
+    -webkit-text-stroke: 4px #92397b;
+}
+
+#letter {
+    margin-top: 120px;
+    text-align: center;
+}
+
+#letter button {
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 35px;
+    box-shadow: 0 0 5px 0 #fff;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.random-word {
+    letter-spacing: 10px;
+    height: 10px;
+    visibility: hidden;
+}
+
+.category-name {
+    font-size: 40px;
+    color: transparent;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    -webkit-text-stroke: 2px #f5f5f5;
+}
+
+.lives {
+    font-family: "Mr Dafoe", cursive;
+    font-size: 30px;
+    color: #eab4e9;
+    filter: drop-shadow(1px 1px 10px #825176);
+    -webkit-text-stroke: 1px #825176;
+    height: 60px;
+    line-height: 60px;
+}
+
+.hint-text {
+    font-size: 20px;
+    color: transparent;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px #f5f5f5;
+}
+
+main {
+    position: relative;
+}
+
+.win-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#categorySelect {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.hint-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fff;
+    border: none;
+}
+
+.hint-btn:hover {
+    box-shadow: 0 0 5px 3px gray;
+}
+
+.hang-man {
+    margin: auto;
+    border: 2px dashed #fff;
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+.man {
+    display: inline-block;
+    position: absolute;
+}
+
+.man10 {
+    border-top: 1px solid #fff;
+    width: 200px;
+    bottom: 10px;
+    left: 10px;
+}
+
+.man9 {
+    border-left: 1px solid #fff;
+    height: 185px;
+    bottom: 5px;
+    left: 15px;
+}
+
+.man8 {
+    border-top: 1px solid #fff;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+}
+
+.man7 {
+    border-left: 1px solid #fff;
+    height: 15px;
+    top: 10px;
+    left: 100px;
+}
+
+.man6 {
+    height: 30px;
+    width: 30px;
+    top: 25px;
+    left: 85px;
+}
+
+.sad {
+    font-size: 30px;
+}
+
+.smile {
+    font-size: 30px;
+    display: none;
+}
+
+.thank-img {
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 110px;
+    display: none;   
+}
+
+.man5 {
+    border-left: 1px solid #fff;
+    height: 45px;
+    top: 54px;
+    left: 100px;
+}
+
+.man4 {
+    border-top: 1px solid #fff;
+    width: 45px;
+    top: 60px;
+    left: 55px;
+    transform: rotate(15deg);
+}
+
+.man3 {
+    border-top: 1px solid #fff;
+    width: 45px;
+    top: 60px;
+    left: 100px;
+    transform: rotate(-15deg);
+}
+
+.man2 {
+    border-top: 1px solid #fff;
+    width: 45px;
+    top: 108px;
+    left: 56px;
+    transform: rotate(-25deg);
+}
+
+.man1 {
+    border-top: 1px solid #fff;
+    width: 45px;
+    top: 108px;
+    left: 99px;
+    transform: rotate(25deg);
+}
+
+.man1, .man2, .man3, .man4, .man5, .man6, .man7, .man8, .man9 {
+    display: none;
+}

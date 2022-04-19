@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/rps.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="head-text text-center">HANGMAN</div>
+        <div class="style-text">80s style</div>
+    </header>
+
+    <main>
+        <div id="letter"></div>
+
+        <p class="category-name mt-3">Choose category to start the game</p>
+
+        <div class="hint-section">
+            <select name="" id="categorySelect" class="form-select form-select-lg mt-3"
+                aria-label=".form-select-lg example">
+                <option value="" selected disabled>Category</option>
+            </select>
+            <button class="hint-btn">Hint</button>
+        </div>
+
+        <p class="random-word mt-4"></p>
+
+        <div class="win-section">
+            <img src="./assets/img/giphy.gif" alt="">
+            <img src="./assets/img/giphy.gif" alt="">
+        </div>
+
+        <p class="lives mt-4"></p>
+
+        <p class="hint-text mt-4">Clue: <span>Your hint text is here</span></p>
+
+        <div class="hang-man mt-4 mb-4">
+            <span class="man man1"></span>
+            <span class="man man2"></span>
+            <span class="man man3"></span>
+            <span class="man man4"></span>
+            <span class="man man5"></span>
+            <span class="man man6"><i class="fas fa-sad-tear sad"></i> <i class="fas fa-grin-beam smile"></i></span>
+            <img class="thank-img" src="./assets/img/output-onlinepngtools.png" alt="">
+            <span class="man man7"></span>
+            <span class="man man8"></span>
+            <span class="man man9"></span>
+            <span class="man man10"></span>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
